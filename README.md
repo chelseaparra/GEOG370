@@ -1,5 +1,4 @@
 # GEOG370
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,11 +6,9 @@
     <title>Projections</title>
 </head>
 <body>
-    <h1>In this project I learned how to display images in different projections</h1>
-    
-    <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
+<h1>In this project I learned how to display images in different projections</h1>
+ <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
     <p>You can write a paragraph here</p>
-    
     <h2>WGS84 Projection</h2>
     <h3>Some observations</h3>
     <a href=".//maps/4326.png">
@@ -33,4 +30,4 @@
     <h2>Data used for this project</h2>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
 </body>
-</html>
+</html> 
