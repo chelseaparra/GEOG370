@@ -9,50 +9,69 @@
     <h1>In this project  learned how to display images in different projections</h1>
     
     <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <p>To display the data I started by using a base map of the world. Then I used the indicatrix mapper to layer over the base map. 
+        The indicatrix mapper puts a grid and cirlces over the map to display the distortion of countries when a specific map projection is used.
+        Using the different map projections in QGIS shows how different projections such as conics, cyliders and spheres cause distortion.
+        The map projection can preserve a number of things while distorting others in exchnage. For example, one projection might preserve areas at the cost of angles.</p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
+    <h3>This projection seems to preserve the shape of countries in the middle lattitudes. 
+        The futher north you go from the equator the more distorted countries like Greenland will be. 
+        The further south you go from the equator the more distorted countries like Antarctica will be. </h3>
     <a href="./maps/Map_1_EPSG_4326.png">
     <img src="./maps/Map_1_EPSG_4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>The Aitoff projection preserves the shape of the countries in the middle of the map.
+        The countries in the corners of the map, for examples, northeast of the equator are very distorted.
+        This makes sense because it's an azimuthal projection, so it will presereve distance and direction from a certain point.</h3>
     <a href="./maps/Map_2_ESRI_54043.png">
     <img src="./maps/Map_2_ESRI_54043.png" alt="Aitoff" width='500px'>
     </a>
     <h2>Pseudo Mercator</h2>
-    <h3>Some observations</h3>
+    <h3>The Pseudo Mercator is commonly seen and this projection shows how much it distorts size of countries. 
+        This is a cylindrical projection. It preserves shape and distance in areas near the equator.
+        It heavily distorts countries at this poles making them seem much larger.</h3>
     <a href="./maps/Map_3_EPSG_3857.png">
     <img src="./maps/Map_3_EPSG_3857.png" alt="Pseudo" width='500px'>
     </a>
     <h2>Sphere Winkel</h2>
-    <h3>Some observations</h3>
+    <h3>Looking at this projection is seems to elongate most of the countries on the map, especially those in the corners of the map.
+        It looks like an azimuthal projection,so it's probably good at minimizing distortion of distances.</h3>
     <a href="./maps/Map_4_ESRI_53018.png">
     <img src="./maps/Map_4_ESRI_53018.png" alt="53018" width='500px'>
     </a>
     <h2>World Cylindrical Equal Area</h2>
-    <h3>Some observations</h3>
+    <h3>This maps seems to have little distortion in most areas except the poles.
+        The poles of this projection are incredibly squished down. This makes sense because it is a cylindrical projection.</h3>
     <a href="./maps/Map_5_ESRI_54034.png">
     <img src="./maps/Map_5_ESRI_54034.png" alt="54034" width='500px'>
     </a>
     <h2>Sphere Equidistant Conic</h2>
-    <h3>Some observations</h3>
+    <h3>This conic projection has the least distortion right in the center of the map.
+        The further you go from the center of the circle, the more distortion there will be.
+        Conics are better for one region or place, so this is probably why this projection shows one area (the poles) as the least distorted.</h3>
     <a href="./maps/Map_6_ESRI_54027.png">
     <img src="./maps/Map_6_ESRI_54027.png" alt="54027" width='500px'>
     </a>
     <h2>North Pole Azimuthal Equidistant</h2>
-    <h3>Some observations</h3>
+    <h3>This azimuthal projection is set on the North Pole. Its size and shape seems to be preserved pretty well.
+        Going further out from the North Poles shows how much distortion has occurred to the other countries.</h3>
     <a href="./maps/Map_7_ESRI_102016.png">
     <img src="./maps/Map_7_ESRI_102016.png" alt="102016" width='500px'>
     </a>
     <h2>Sphere Craster Parabolic</h2>
-    <h3>Some observations</h3>
+    <h3>This is one of the projections I chose and I thought its shape was interesting.
+        This projection preserves areas directly on the equator while heavily distorting the poles.
+        I hadn't heard of a parabolic projection before and seeing its shape reminds me of the Aitoff projection we saw earlier,
+        just more pinched in at the poles.</h3>
     <a href="./maps/Map_8_ESRI_53046.png">
     <img src="./maps/Map_8_ESRI_53046.png" alt="53046" width='500px'>
     </a>
     <h2>Asia North Equidistant Conic</h2>
-    <h3>Some observations</h3>
+    <h3>This was another projection I chose. I thought this conic was interesting because of its flat top.
+        The name and look of the map show that this conic was focused on the continent of Asia.
+        This makes sense because Asia is preserved very well, while areas outside of it are distorted.</h3>
     <a href="./maps/Map_9_ESRI_102026.png">
     <img src="./maps/Map_9_ESRI_102026.png" alt="102026" width='500px'>
     </a>
