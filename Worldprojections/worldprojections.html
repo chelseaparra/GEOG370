@@ -11,7 +11,7 @@
     <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
     <p>To display the data I started by using a base map of the world. Then I used the indicatrix mapper to layer over the base map. 
         The indicatrix mapper puts a grid and cirlces over the map to display the distortion of countries when a specific map projection is used.
-        Using the different map projections in QGIS shows how different projections such as conics, cyliders and spheres cause distortion.
+        Using the different map projections in QGIS shows how different projections such as conics, cyliders and azimuthal projections cause distortion.
         The map projection can preserve a number of things while distorting others in exchnage. For example, one projection might preserve areas at the cost of angles.</p>
     
     <h2>WGS84 Projection</h2>
@@ -23,7 +23,7 @@
     </a>
     <h2>Aitoff Projection</h2>
     <h3>The Aitoff projection preserves the shape of the countries in the middle of the map.
-        The countries in the corners of the map, for examples, northeast of the equator are very distorted.
+        The countries in the corners of the map, for example, northeast of the equator, are very distorted.
         This makes sense because it's an azimuthal projection, so it will presereve distance and direction from a certain point.</h3>
     <a href="./maps/Map_2_ESRI_54043.png">
     <img src="./maps/Map_2_ESRI_54043.png" alt="Aitoff" width='500px'>
@@ -37,14 +37,15 @@
     </a>
     <h2>Sphere Winkel</h2>
     <h3>Looking at this projection is seems to elongate most of the countries on the map, especially those in the corners of the map.
-        It looks like an azimuthal projection,so it's probably good at minimizing distortion of distances.</h3>
+        It looks like an azimuthal projection, so it's probably good at minimizing distortion of distances.</h3>
     <a href="./maps/Map_4_ESRI_53018.png">
     <img src="./maps/Map_4_ESRI_53018.png" alt="53018" width='500px'>
     </a>
     <h2>World Cylindrical Equal Area</h2>
     <h3>This maps seems to have little distortion in most areas except the poles.
         The poles of this projection are incredibly squished down. 
-        This makes sense because it is a cylindrical projection.</h3>
+        This makes sense because it is a cylindrical projection. Meaning the areas that are touching the cylinder (the middle in this case)
+        will preserved more than those that are not touching the cylinder</h3>
     <a href="./maps/Map_5_ESRI_54034.png">
     <img src="./maps/Map_5_ESRI_54034.png" alt="54034" width='500px'>
     </a>
