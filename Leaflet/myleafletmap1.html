@@ -43,6 +43,22 @@
     return L.marker(latlng, {icon: geolIcon});}}) // c
     .bindPopup(customPopup) // d
     .addTo(map); //
+
+    // L.geoJSON(kenan).addTo(map)
+
+    var kenanIcon = L.icon({
+        iconUrl: 'https://cdn.onlinewebfonts.com/svg/img_565355.png',
+        iconSize: [50,50],
+        popopAnchor: [0,0]
+    });
+
+    var customPopup = "Kenan Stadium, where the best football games are played <br/><img src='https://en.wikipedia.org/wiki/Kenan_Memorial_Stadium#/media/File:Kenan_Memorial_Stadium.jpg'width='100px'/>";
+
+    L.geoJSON(u=kenan, { // a
+    pointToLayer: function (feature, latlng) { // b
+    return L.marker(latlng, {icon: kenanIcon});}}) // c
+    .bindPopup(customPopup) // d
+    .addTo(map); //
     
 
 </script>
