@@ -45,10 +45,11 @@
     ];            
     var polyline = L.polyline(polylinePoints).addTo(map);
 
+    var leafIcon = helper.getIcon( {icon: 'leaf', markerColor: 'red'} );
     L.marker([35.9140, -79.0479]).addTo(map)
         .bindPopup('McIver Residence Hall')
         .openPopup();
-    
+
     L.marker([35.9123, -79.0507]).addTo(map)
         .bindPopup('Old East Residence Hall')
         .openPopup();
