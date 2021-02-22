@@ -35,6 +35,12 @@
     [35.9039, -79.0434]]
     var poly = L.polygon(polygonPoints).addTo(map);
 
+    var polylinePoints = [
+    [35.9132, -79.0479],
+    [35.9127, -79.0490]
+    ];            
+    var polyline = L.polyline(polylinePoints).addTo(map);
+
     // L.geoJSON(mitchell).addTo(map)
 
     var geolIcon = L.icon({
