@@ -59,6 +59,22 @@
     return L.marker(latlng, {icon: kenanIcon});}}) // c
     .bindPopup(customPopup) // d
     .addTo(map); //
+
+    // L.geoJSON(poplar).addTo(map)
+
+    var poplarIcon = L.icon({
+        iconUrl: 'https://www.pngitem.com/pimgs/m/238-2387879_transparent-tree-symbol-png-raposinha-png-png-download.png',
+        iconSize: [50,50],
+        popopAnchor: [0,0]
+    });
+
+    var customPopup = "The Davie Poplar, the most historic tree on campus <br/><img src='http://bturner.zenfolio.com/img/s11/v3/p86172362-5.jpg'width='100px'/>";
+
+    L.geoJSON(u=poplar, { // a
+    pointToLayer: function (feature, latlng) { // b
+    return L.marker(latlng, {icon: poplarIcon});}}) // c
+    .bindPopup(customPopup) // d
+    .addTo(map); //
     
 
 </script>
