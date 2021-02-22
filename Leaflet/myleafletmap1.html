@@ -27,6 +27,12 @@
 <script>
     var map = L.map('mapid').setView([35.91, -79.05], 17);
     L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {}).addTo(map)
+    var polygon = L.polygon([
+    [35.9047, -79.0434],
+    [35.9048, -79.0424],
+    [35.9039, -79.0422],
+    [[35.9039, -79.0434]],
+    ]).addTo(mymap);
 
     // L.geoJSON(mitchell).addTo(map)
 
