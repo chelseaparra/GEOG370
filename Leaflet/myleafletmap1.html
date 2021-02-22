@@ -14,6 +14,8 @@
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
 
+   <script src = "./data/old_well_4326.geojson"></script>
+
 </head>
 <body>
     
@@ -28,7 +30,8 @@
     L.marker([35.9077, -79.0523]).addTo(map)
     .bindPopup("Mitchell Hall-Geology Department")
     .openPopup();
-    
+
+    L.geoJSON(uncwell).addTo(map)
     
 </script>
 
