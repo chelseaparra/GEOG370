@@ -28,6 +28,22 @@
   <script>
       var map = L.map('map').setView([36.00475158859181, -78.92095080581944], 14.0);
       
+      // L.geoJSON(bulls).addTo(map)
+
+    var bullsIcon = L.icon({
+        iconUrl: 'https://image.flaticon.com/icons/png/512/88/88961.png',
+        iconSize: [50,50],
+        popopAnchor: [0,0]
+    });
+
+    var customPopup = "Durham Bulls Stadium <br/><img src='http://ballparkdigest.com/wp-content/uploads/2014/11/ca-9539_bpd.jpg'width='100px'/>";
+
+    L.geoJSON(u=mitchell, { // a
+    pointToLayer: function (feature, latlng) { // b
+    return L.marker(latlng, {icon: geolIcon});}}) // c
+    .bindPopup(customPopup) // d
+    .addTo(map); //
+
       var hikebike = L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
       maxZoom: 19
         }).addTo(map)
@@ -40,11 +56,11 @@
       })
 
       var daTiles = {
-        "BikeHike": hikebike,
+        "BikeHike Map": hikebike,
         "Durham Photo": daPhoto
       }
 
-      L.control.layers(daTiles).addTo(map)
+      L.control.layers(daTiles).addTo(map);
 
 
   
