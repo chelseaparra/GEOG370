@@ -52,6 +52,17 @@
         .bindPopup(Popupstatue)
         //.openPopup();
 
+      var Icondurham = L.icon({
+      iconUrl: 'https://www.pngkey.com/png/full/19-195443_school-icon-png-school-building-icon-png.png',
+      iconSize: [50,50],
+      popopAnchor: [0,0]
+    });
+
+    var Popupdurham = "Durham Bulls Stadium <br/><img src='https://upload.wikimedia.org/wikipedia/commons/0/0a/Durham_School_of_the_Arts.jpg'width='100px'/>";
+
+        L.marker([36.0028, -78.9068], {icon: Icondurham}).addTo(map)
+        .bindPopup(Popupdurham)
+        //.openPopup();
 
       var hikebike = L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
       maxZoom: 19
