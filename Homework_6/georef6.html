@@ -28,10 +28,6 @@
   <script>
       var map = L.map('map').setView([36.00475158859181, -78.92095080581944], 14.0);
 
-      var hikebike = L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
-      maxZoom: 19
-        }).addTo(map)
-
       var Iconbulls = L.icon({
       iconUrl: 'https://image.flaticon.com/icons/png/512/88/88961.png',
       iconSize: [50,50],
@@ -43,6 +39,24 @@
         L.marker([35.9917, -78.9041], {icon: Iconbulls}).addTo(map)
         .bindPopup(Popupbulls)
         //.openPopup();
+
+        var Iconstatue = L.icon({
+      iconUrl: 'https://www.pngfind.com/pngs/m/69-699597_bull-clipart-png-image-bulls-clip-art-png.png',
+      iconSize: [50,50],
+      popopAnchor: [0,0]
+    });
+
+    var Popupstatue = "Durham Bull Broze Sculpture <br/><img src='https://cdn.lib.unc.edu/commemorative-landscapes/media/monument/187_full.jpg'width='100px'/>";
+
+        L.marker([35.9917, -78.9041], {icon: Iconbulls}).addTo(map)
+        .bindPopup(Popupbulls)
+        //.openPopup();
+
+
+      var hikebike = L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
+      maxZoom: 19
+        }).addTo(map)
+
       var daPhoto = L.tileLayer('./HW_6_Tiles/{z}/{x}/{y}.png', {
         minZoom: 12,
         maxZoom: 16,
