@@ -32,16 +32,17 @@
       maxZoom: 19
         }).addTo(map)
 
-      var bullsIcon = L.icon({
+      var Iconbulls = L.icon({
       iconUrl: 'https://image.flaticon.com/icons/png/512/88/88961.png',
       iconSize: [50,50],
       popopAnchor: [0,0]
     });
 
-    var customPopup = "Durham Bulls Stadium <br/><img src='http://ballparkdigest.com/wp-content/uploads/2014/11/ca-9539_bpd.jpg'width='100px'/>";
-    
-        L.marker([35.9917, -78.9041], {icon: bullsIcon}).addTo(map);
+    var Popupbulls = "Durham Bulls Stadium <br/><img src='http://ballparkdigest.com/wp-content/uploads/2014/11/ca-9539_bpd.jpg'width='100px'/>";
 
+        L.marker([35.9917, -78.9041], {icon: Iconbulls}).addTo(map)
+        .bindPopup(Popupbulls)
+        //.openPopup();
       var daPhoto = L.tileLayer('./HW_6_Tiles/{z}/{x}/{y}.png', {
         minZoom: 12,
         maxZoom: 16,
