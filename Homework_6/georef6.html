@@ -30,41 +30,12 @@
 
       var daMarker = L.marker([36.00475158859181, -78.92095080581944], 14.0);
 
-      var Iconbulls = L.icon({
-      iconUrl: 'https://image.flaticon.com/icons/png/512/88/88961.png',
-      iconSize: [50,50],
-      popopAnchor: [0,0]
-    });
-
-    var Popupbulls = "Durham Bulls Stadium: Looking at the recent map you can see the baseball stadium. The stadium was built in 1995 meaning it doesn't even exist in the old Durham map. <br/><img src='http://ballparkdigest.com/wp-content/uploads/2014/11/ca-9539_bpd.jpg'width='100px'/>";
-
-        L.marker([35.9917, -78.9041], {icon: Iconbulls}).addTo(map)
-        .bindPopup(Popupbulls)
-        //.openPopup();
-
-      var Iconamerican = L.icon({
-      iconUrl: 'https://images.vexels.com/media/users/3/150101/isolated/preview/20b0d76e314de174be72af232ea9eeb0-water-tower-flat-icon-by-vexels.png',
-      iconSize: [50,50],
-      popopAnchor: [0,0]
-    });
-
-    var Popupamerican = "The American Tobacco Campus: This historic district has been around since the 1870's and was owned by the tobacco companies at the time. Looking at the new map it has since been redeveloped and houses multiple businesses and even apartment homes.  <br/><img src='https://tclf.org/sites/default/files/thumbnails/image/American_Tobacco_District_Mark_Phillips_2018_03.jpg'width='100px'/>";
-
-        L.marker([35.9933, -78.9042], {icon: Iconamerican}).addTo(map)
-        .bindPopup(Popupamerican)
-        //.openPopup();
-
-      var Icondurham = L.icon({
-      iconUrl: 'https://www.pngkey.com/png/full/19-195443_school-icon-png-school-building-icon-png.png',
-      iconSize: [50,50],
-      popopAnchor: [0,0]
-    });
-
-    var Popupdurham = "Durham School of the Arts: This school was built in 1902 so it's visible in the older map. However in the older map you can see some buildings that are different today. There have since been buildings added and outdoor renovations such as a new track <br/><img src='https://upload.wikimedia.org/wikipedia/commons/0/0a/Durham_School_of_the_Arts.jpg'width='100px'/>";
-
-        L.marker([36.0028, -78.9068], {icon: Icondurham}).addTo(map)
-        .bindPopup(Popupdurham)
-        //.openPopup();
+      var bullsIcon = L.icon({
+        iconUrl: 'https://image.flaticon.com/icons/png/512/88/88961.png',
+        iconSize: [50, 50],
+        popupAnchor: [0,0]
+      });
+        L.marker([35.9917, -78.9041], {icon: bullsIcon}).addTo(map).bindPopup("Durham Bulls Stadium: Looking at the recent map you can see the baseball stadium. The stadium was built in 1995 meaning it doesn't even exist in the old Durham map. <br/><img src='http://ballparkdigest.com/wp-content/uploads/2014/11/ca-9539_bpd.jpg'width='100px'/>");
 
       var hikebike = L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
       maxZoom: 19
