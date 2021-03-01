@@ -35,14 +35,14 @@
         iconSize: [50, 50],
         popupAnchor: [0,0]
       });
-        L.marker([35.9917, -78.9041], {icon: bullsIcon}).addTo(map).bindPopup("Durham Bulls Stadium: Looking at the recent map you can see the baseball stadium. The stadium was built in 1995 meaning it doesn't even exist in the old Durham map. <br/><img src='http://ballparkdigest.com/wp-content/uploads/2014/11/ca-9539_bpd.jpg'width='100px'/>");
+      var bullsIcon = L.marker([35.9917, -78.9041], {icon: bullsIcon}).addTo(map).bindPopup("Durham Bulls Stadium: Looking at the recent map you can see the baseball stadium. The stadium was built in 1995 meaning it doesn't even exist in the old Durham map. <br/><img src='http://ballparkdigest.com/wp-content/uploads/2014/11/ca-9539_bpd.jpg'width='100px'/>");
 
       var americanIcon = L.icon({
         iconUrl: 'https://images.vexels.com/media/users/3/150101/isolated/preview/20b0d76e314de174be72af232ea9eeb0-water-tower-flat-icon-by-vexels.png',
         iconSize: [50, 50],
         popupAnchor: [0,0]
       });
-        L.marker([35.9933, -78.9042], {icon: americanIcon}).addTo(map).bindPopup("The American Tobacco Campus: This historic district has been around since the 1870's and was owned by the tobacco companies at the time. Looking at the new map it has since been redeveloped and houses multiple businesses and even apartment homes.  <br/><img src='https://tclf.org/sites/default/files/thumbnails/image/American_Tobacco_District_Mark_Phillips_2018_03.jpg'width='100px'/>");
+      var americanIcon = L.marker([35.9933, -78.9042], {icon: americanIcon}).addTo(map).bindPopup("The American Tobacco Campus: This historic district has been around since the 1870's and was owned by the tobacco companies at the time. Looking at the new map it has since been redeveloped and houses multiple businesses and even apartment homes.  <br/><img src='https://tclf.org/sites/default/files/thumbnails/image/American_Tobacco_District_Mark_Phillips_2018_03.jpg'width='100px'/>");
     
       var durhamIcon = L.icon({
         iconUrl: 'https://www.pngkey.com/png/full/19-195443_school-icon-png-school-building-icon-png.png',
@@ -71,8 +71,15 @@
         "Durham Bulls Stadium": durhamIcon
       }
       
+      var americanIcon = {
+        "American Tobacco Campus": americanIcon
+      }
 
-      L.control.layers(daTiles, durhamIcon).addTo(map);
+      var bullsIcon = {
+        "Durham Bulls Stadium": bullsIcon
+      }
+
+      L.control.layers(daTiles, durhamIcon, americanIcon, bullsIcon).addTo(map);
 
   </script>
 </body>
